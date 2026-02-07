@@ -1,0 +1,2 @@
+git config --global user.name "Udemy - Phat Pham"
+git config --global user.email "ptp261094@gmail.com"
