@@ -1,0 +1,67 @@
+1.
+- git commit --amend: go to vim mode to edit commit message
+- git commit --amend -m "<message>": update new commit message
+- git restore --staged <file>: revert files from Staging to Working Directory
+- git reset HEAD~1.: revert files from Repository to Working Directory
+
+2.
+    a. Tạo 3 file: file1, file2, file3
+i. Vùng working: no
+ii. Vùng staging: no
+iii. Vùng repository: no
+    b. Chạy lệnh: git init
+i. Vùng working: file1, file2, file3
+ii. Vùng staging: no
+iii. Vùng repository: no
+    c. Chạy lệnh: git commit -m”init project”
+i. Vùng working: file1, file2, file3
+ii. Vùng staging: no
+iii. Vùng repository: no
+    d. Chạy lệnh: git add file1
+i. Vùng working: file2, file3
+ii. Vùng staging: file1
+iii. Vùng repository: no
+    e. Chạy lệnh: git commit -m”add file”
+i. Vùng working: file2, file3
+ii. Vùng staging: no
+iii. Vùng repository: file1
+    f. Chạy lệnh: git add .
+i. Vùng working: no
+ii. Vùng staging: file2, file3
+iii. Vùng repository: file1
+    g. Chạy lệnh: git restore --staged file2
+i. Vùng working: file2
+ii. Vùng staging: file3
+iii. Vùng repository: file1
+    h. Chạy lệnh: git commit -m”add all files”
+i. Vùng working: file2
+ii. Vùng staging: no
+iii. Vùng repository: file1, file3
+    i. Chạy lệnh: git reset HEAD~1
+i. Vùng working: file1, file2, file3
+ii. Vùng staging: no
+iii. Vùng repository: no
+
+3.
+    a.Chạy lệnh git init
+i. Vùng working: no
+ii. Vùng staging: no
+iii. Vùng repository: no
+    b. Tạo file file1.txt, file2.txt, oops/file3.txt.
+i. Vùng working: file1.txt, file2.txt, oops/file3.txt
+ii. Vùng staging: no
+iii. Vùng repository: no
+    c. Thêm file .gitignore, thêm vào 2 dòng:
+        i. file1.txt
+        ii. oops/
+i. Vùng working: file2.txt
+ii. Vùng staging: no
+iii. Vùng repository: no
+    d. Chạy lệnh: git add .
+i. Vùng working: no
+ii. Vùng staging: file2.txt
+iii. Vùng repository: no
+    e. Chạy lệnh: git commit -m"init project"
+i. Vùng working: no
+ii. Vùng staging: no
+iii. Vùng repository: file2.txt
