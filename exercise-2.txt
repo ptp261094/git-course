@@ -1,12 +1,12 @@
 1.
-- git commit --amend: go to vim mode to edit commit message
-- git commit --amend -m "<message>": update new commit message
-- git restore --staged <file>: revert files from Staging to Working Directory
-- git reset HEAD~1.: revert files from Repository to Working Directory
+- git commit --amend: go to vim mode to edit the latest commit message
+- git commit --amend -m "<message>": update new commit message directly
+- git restore --staged <file>: revert a file from Staging to Working Directory
+- git reset HEAD~1.: revert 1 commit from Repository to Working Directory
 
 2.
     a. Tạo 3 file: file1, file2, file3
-i. Vùng working: no
+i. Vùng working: file1, file2, file3
 ii. Vùng staging: no
 iii. Vùng repository: no
     b. Chạy lệnh: git init
@@ -38,9 +38,9 @@ i. Vùng working: file2
 ii. Vùng staging: no
 iii. Vùng repository: file1, file3
     i. Chạy lệnh: git reset HEAD~1
-i. Vùng working: file1, file2, file3
+i. Vùng working: file2, file3
 ii. Vùng staging: no
-iii. Vùng repository: no
+iii. Vùng repository: file1
 
 3.
     a.Chạy lệnh git init
